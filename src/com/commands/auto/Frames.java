@@ -33,7 +33,7 @@ public class Frames extends JFrame implements ActionListener
 	private JProgressBar progressBar;
 	private JButton btnStart;
 	private JLabel versionLabel;
-	public JTextArea pinArea;
+	public JTextArea accountArea;
 	public JTextArea pinArea2;
 	private JScrollPane scroll;
 	private JScrollPane scroll2;
@@ -108,8 +108,8 @@ public class Frames extends JFrame implements ActionListener
 		accountNames.setBounds(30, 140, 200, 20);
 		contentPane.add(accountNames);
 		
-		pinArea = new JTextArea ("");
-		scroll = new JScrollPane (pinArea);
+		accountArea = new JTextArea ("");
+		scroll = new JScrollPane (accountArea);
 		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		contentPane.add(scroll);
 		scroll.setBounds(30, 160, 200, 200);
@@ -193,9 +193,9 @@ public class Frames extends JFrame implements ActionListener
 			try
 			{				
 				MainBot bot = new MainBot(Frames.this, buttonGroup.getSelection().getActionCommand(), 
-						true, pinArea.getText());
+						true, accountArea.getText());
 
-				JOptionPane.showMessageDialog(null, "Before continuing: \n 1. Make sure ICS is on the left screen. \n 2. Make sure CDS is on the right screen.", "Warning",
+				JOptionPane.showMessageDialog(null, "Starting soon. ", "Warning",
 						JOptionPane.WARNING_MESSAGE);
 				ExecutorService executor = Executors.newCachedThreadPool();
 				executor.execute(bot);

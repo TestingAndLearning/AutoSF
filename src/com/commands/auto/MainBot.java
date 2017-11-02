@@ -1,6 +1,10 @@
 package com.commands.auto;
 
 import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
@@ -28,7 +32,7 @@ public class MainBot implements Runnable
 	public Type typeString;
 
 	//public MainBot(Frames frames, int nPins, int interval)
-	public MainBot(Frames frames, String choice, boolean release, String pinArea)
+	public MainBot(Frames frames, String choice, boolean release, String accountArea)
 	{
 		try
 		{
@@ -38,7 +42,7 @@ public class MainBot implements Runnable
 			this.choice = choice;
 			this.release = release;
 			typeString = new Type();
-			this.pinArea = pinArea.split("\n");
+			this.pinArea = accountArea.split("\n");
 		} 
 		catch (Exception e)
 		{
@@ -58,10 +62,27 @@ public class MainBot implements Runnable
 			Perform perform = new Perform(MainBot.this);
 			Scan scan = new Scan(MainBot.this, perform);
 			Check check = new Check(MainBot.this, perform, scan);
+			
+			Toolkit toolkit = Toolkit.getDefaultToolkit();
+			Clipboard clipboard = toolkit.getSystemClipboard();
+			String clipboardResult = (String) clipboard.getData(DataFlavor.stringFlavor);
+			String csSection = clipboardResult.split("CS Notes")[1].split("CS Demo Date")[0];
+			
 
 			//Sets out the order of steps to take from the beginning
-			for (;currentPin < pinArea.length; currentPin++)
-				{				
+				//for (;currentPin < pinArea.length; currentPin++)
+				for(int i = 0; i < 1; i++)
+				{		
+						/*
+						String testString = Arrays.toString(pinArea).replace(",", "\n").replace("[", "").replace("]", "").replace(" ", "");
+						System.out.println(testString);
+						
+						*/
+						System.out.println(csSection);
+
+						
+						
+						/* 
 						perform.searchPin();
 						check.searchResults();
 						check.noRead();
@@ -74,6 +95,7 @@ public class MainBot implements Runnable
 						perform.refreshCDS();
 						updatePin();
 						toLog();
+						*/
 						
 						synchronized(this)
 						{
@@ -87,7 +109,7 @@ public class MainBot implements Runnable
 			frames.setProgressState(true);
 			JOptionPane.showMessageDialog(null, "Done.");
 		} 
-		catch (InterruptedException e)
+		catch (InterruptedException | UnsupportedFlavorException | IOException e)
 		{
 			e.printStackTrace();
 		}
@@ -147,7 +169,7 @@ public class MainBot implements Runnable
 	public void updatePin()
 	{
 		String[] updatedPin = Arrays.copyOfRange(pinArea, currentPin + 1, pinArea.length); //+1 for current pins to clear whole box after everything is done. 
-		frames.pinArea.setText(Arrays.toString(updatedPin).replace(",", "\n").replace("[", "").replace("]", "").replace(" ", "")); //Default display of toString from array shows square brackets with commas separating each value. This replaces it. 
+		frames.accountArea.setText(Arrays.toString(updatedPin).replace(",", "\n").replace("[", "").replace("]", "").replace(" ", "")); //Default display of toString from array shows square brackets with commas separating each value. This replaces it. 
 	}	
 	
 	/** Creates/updates the log file for pins that need to be released. 

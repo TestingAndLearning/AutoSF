@@ -366,6 +366,12 @@ public class Check
 	}
 	
 	/** Remember to clean up code above since it was from different project. **/
+	//Checks for folder and id card icon to see if there is only 1 result for account. 
+	public void ifOnlyOneResult()
+	{
+		
+	}
+	
 	
 	
 }

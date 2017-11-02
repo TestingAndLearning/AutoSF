@@ -354,6 +354,8 @@ public class Perform
 	        bot.updatePin();
 	        bot.sleep(2000);  
 		}
+		
+
 	}
 	
 	//Clicks @@@@@ @@@@@ button to @@@@@. 
@@ -365,5 +367,13 @@ public class Perform
 		bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 		bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
 		bot.sleep(delay);
+	}
+	
+	
+	/** Remember to clean up code above since it was from different project. **/
+	//Moves mouse to search bar on left, pastes the first account from list and presses enter to search. 
+	public void searchAccount()
+	{
+		
 	}
 }
