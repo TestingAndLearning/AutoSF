@@ -122,6 +122,12 @@ public class Perform
 		System.out.println("Finished changing tabs. ");
 	}
 	
+	//Moves to click the texteditor. 
+	public void clickTextEditor()
+	{
+		moveAndClick(1600,500);
+	}
+	
 	//Trims clipboard and types CS section in HTML tables. 
 	public void typeCSInfo() throws UnsupportedFlavorException, IOException
 	{
@@ -138,9 +144,9 @@ public class Perform
 		bot.robot.keyRelease(KeyEvent.VK_CONTROL);
 		wait(delayTime);
 		
-		bot.type("\n" + "<tr class + 'trs' id='" + bot.getCurrentAccount().replaceAll("\\s+","-") + "'>" + "\n" +
+		bot.type("\n" + "<tr class='trs' id='" + bot.getCurrentAccount().replaceAll("\\s+","-").toLowerCase() + "'>" + "\n" +
 				"<td>"+bot.getCurrentAccount()+"</td>"+"\n" + 
-				"<td>"+"$"+bot.getCurrentValue()+"</td>"+"\n" +
+				"<td>"+bot.getCurrentValue()+"</td>"+"\n" +
 				"<td>"+ csSection + "</td>" + "\n" +
 				"</tr>" + "\n");
 		System.out.println("Finished typing CS Info");

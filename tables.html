@@ -1,0 +1,925 @@
+<style type="text/css">
+table, td, th 
+{    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+table 
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td 
+{
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+.searchAccount
+{
+  margin-bottom: 10px;
+}
+
+#accountName
+{
+  min-width: 300px;
+}
+
+#accountValue
+{
+  min-width: 250px;
+}
+
+</style>
+<button id="showAll" onClick="showAll()">Show All</button>
+<div class="wrap">
+   <div class="search">
+      <input type="text" id="searchAccount" class="searchAccount" placeholder="Search Account Name">
+      <button type="submit" onClick="searchAccounts()" class="searchButton">Search</button>
+   </div>
+</div>
+
+
+<table style="width:100%" class="sortable">
+  <tr class="table-header">
+    <th id="accountName">Account Name</th>
+    <th id="accountValue">Average Annual Value</th> 
+    <th id="csInfo">Customer Success Information</th>
+  </tr>
+  <tr class="trs" id="Assurant">
+    <td>Assurant</td>
+    <td>$10,000</td> 
+    <td>A lot of text here. A lot of text here as well. A lot of text here as well. 
+    A lot of text here as well. 
+    A lot of text here as well. </td>
+  </tr>
+  <tr class="trs" id="Solar-Turbines">
+    <td>Solar Turbines</td>
+    <td>$12,000</td> 
+    <td>5/17/2017 TL 
+
+Talked with Steven Lee, according to their corporate standard they are discussing whether or not DNN is an appropriate CMS for them. Steven is having a meeting Friday at 1 o'clock with company to discuss CMS options. Steven wants Assurant to stay with DNN as he likes it, so he will need to convince the board to stay. 
+
+Having a meeting with him and Tony S 5/24/2017 
+
+5/24/2017 TL 
+
+Per our meeting with Steven Lee, he stated that Assurant is planning to phase off DNN for business reasons. 
+
+The reasons discussed were: 
+
+80% of their sites are on SiteFinity, the company wanted to move to one CMS and have already signed a contract with SiteFinity. 
+They have 20+ certified SiteFinity developers while they had one person that helped managed DNN tasks. 
+The numbers that they’ve received from SiteFinity was significantly lower than what was given from DNN. 
+
+Even though Steven likes the product, the decision has been made by their new CIO. Per our understanding, they have 2 licenses, one coming up for renewal next month and another in 2018 ($100K) ... latter is up for churn risk.</td>
+  </tr>
+  <tr class="trs" id="WH-Smith-Ltd">
+    <td>WH Smith Ltd</td>
+    <td>$9,975</td> 
+    <td>A lot of text here. A lot of text here as well. 
+    A lot of text here as well. 
+    A lot of text here as well. A lot of text here as well.  </td>
+  </tr>
+  <tr class="trs" id="USACRC-Combat-Readiness-Center">
+    <td>USACRC (Combat Readiness Center)</td>
+    <td>$8,000</td> 
+    <td>A lot of text here as well. A lot of text here as well.  444444
+    A lot of text here as well. 
+    A lot of text here as well. 
+    A lot of text here as well. </td>
+  </tr>
+
+  <tr class='trs' id='L'Oréal'>
+<td>L'Oréal</td>
+<td>$20,500.00</td>
+<td>23</td>
+</tr>
+</tr>
+<tr class='trs' id='COPD-Foundation'>
+<td>COPD Foundation</td>
+<td>$21,237.58</td>
+<td>23</td>
+</tr>
+
+<tr class='trs' id='FreedomWorks'>
+<td>FreedomWorks</td>
+<td>$140,900.00</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='Epic-Games'>
+<td>Epic Games</td>
+<td>$129,489.00</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='Defense-Media-Activity'>
+<td>Defense Media Activity</td>
+<td>$100,124.67</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='SportsDirect.com'>
+<td>SportsDirect.com</td>
+<td>$85,925.00</td>
+<td>  
+March 02 2017 TS 
+Demo completed with Will. Meeting was cut short, looking to schedule another one as customer has some outstanding questions. They also noted, phasing off is a possiblilty.
+   
+</td>
+</tr>
+
+<tr class='trs' id='The-Orvis-Company'>
+<td>The Orvis Company</td>
+<td>$68,740.00</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='50Hertz-Transmission-GmbH'>
+<td>50Hertz Transmission GmbH</td>
+<td>$66,729.33</td>
+<td>  
+Spoke with Andre on the phone, the team at 50 Hertz is not directly involved in the development and maintenance of the site so he is putting me in contact with the individuals involved with the site. However, he was very interested in setting up a time for a meeting with the product team as they have plans to upgrade their sites to Evoq 9 - MF 14/06/2017 
+
+Spoke with Andrea who was also interested in a demo however they would like a technical demo and the latest that they can meet with their developers is 4:00 PM their time so 7:00 AM PST. I feel that Chris P would be the best for the demo so I will reach out through Tony to try and set something up. I also uncovered that they are interested in looking at Evoq Engage I have requested Alex to provision them a trial license for Engage so that they can see if it suits their needs. - MF 20/07/17
+   
+</td>
+</tr>
+
+<tr class='trs' id='Gold's-Gym'>
+<td>Gold's Gym</td>
+<td>$60,534.00</td>
+<td>  
+March 03 2017 TS 
+Demo scheduled with John on March 7th. 
+
+March 07 2017 TS 
+Demo Completed w/ Jason, Zubair and Dewitt. Customer will upgrade to Evoq 9 in about a month once they receive new branding from Marketing. They are also interested in Dev Support hours to utilize best practices for Skinning(when they developer for Evoq 9).
+   
+</td>
+</tr>
+
+<tr class='trs' id='Gannett-Digital-Inc.'>
+<td>Gannett Digital Inc.</td>
+<td>$52,339.29</td>
+<td>  
+Tony, 
+
+Sorry for the delay in responding. I sent this information to the team that manages this product in house and they will hopefully get back to you in the near future. 
+
+I processed the purchase requests and renewals, so if you need anything from me let me know. 
+
+Thanks 
+
+Lisa Wood
+   
+</td>
+</tr>
+
+<tr class='trs' id='Gundersen-Lutheran'>
+<td>Gundersen Lutheran</td>
+<td>$50,811.33</td>
+<td>  
+Feb 28 2017 - TS 
+Demo scheduled with John on Monday, March 6th. 
+
+Mar 6 2017 
+Demo Completed. Customer is in process of upgrading from EC 7.3.4. Mark and Davit noted, they are upgrading to Evoq 8.2 only due to breaking changes and their skin and custom modules are not compatible. 
+
+Davit will upload their site for our Engineering and QA teams, to test upgrades and upgrading tool.
+   
+</td>
+</tr>
+
+<tr class='trs' id='Corpus-Christi-ISD'>
+<td>Corpus Christi ISD</td>
+<td>$50,350.00</td>
+<td>  
+April 26th 2017 TS 
+Demo schedule with Chris by Billy and his Director on May 3rd at 12pm. 
+Agenda: 
+Hey Tony & Chris, 
+I am really excited to get some more in-depth details on EVOQ 9.1. These are the items I would be most interested in: 
+
+1. Any Intranet features/enhancements. We are beginning a project to create our Intranet and working with DNNPro (Mark Harle), but want to use as much of the out of the box functionality of EVOQ 9.1 as possible. I am specifically interested in the items below, but also anything you think would be helpful in our Intranet project. 
+a. Governance 
+b. Document Management 
+c. Integration - MS Project? 
+d. Active Directory SSO - We are currently using AD-PRO, is this now available out of the box? 
+e. SSO to both the user's “home (campus)” portal and the district portal 
+
+2. Will forms/content items/visualizers realistically allow non-programmers to develop “apps”? For Example: Special school application process for students 
+a. more interested in how work with the data after the form is created. 
+b. Create a form to collect student applications - don’t need to spend time building a form 
+c. Control which students are able to submit the form 
+d. Create a management view to work with the collected data 
+i. Update data - Accept, decline, waitlist type functionality 
+ii. Create aggregate information about the data 
+
+3. API’s both in EVOQ and connecting securely to API’s on premise. 
+a. Security features/connection mechanisms. 
+b. Any examples I can look at 
+c. Can a form be set to post to an on premise API securely? 
+
+4. Liquid Content 
+a. I see how this would be great for a businesses that post a lot of content to multiple channels. I am having a hard time seeing it being of great benefit to us. 
+
+5. Breaking changes 9.1 
+6. Other notable roadmap items 
+
+
+Sincerely, 
+
+William (Billy) Shelton 
+
+May 3rd 2017 TS 
+Demo executed by Chris with Billy and his team. They're looking to upgrade in near future and will reach out to Chris directly for outstanding items. Their concern is slow Sandbox device which potentially could be due to their SQL code, Bruce will take a closer look at that.
+   
+</td>
+</tr>
+
+<tr class='trs' id='University-of-Oklahoma'>
+<td>University of Oklahoma</td>
+<td>$50,033.33</td>
+<td>  
+June 1st 2017 TS 
+Spoke with Robert. He stated, they're not using Evoq that much, rather lot of custom modules which ITX helps them setup. 
+Follow-up call setup for June 13th. 
+
+June 13th 2017 TS 
+Demo completed with Robert by Chad. Robert noted, they're not using Evoq Engage features and don't find it that beneficial YET. They've built custom modules for everything, AD being example as they didn't want to buy one from store. He like FB, LC and API features, near future he will see look closely at those and try to import data from custom modules in LC through API. They're on 8.4.2 and will be upgrading to 9.1.1 soon. Also, provided email address for support, they'll be reaching out with assistance to upgrading.
+   
+</td>
+</tr>
+
+<tr class='trs' id='National-Safety-Council'>
+<td>National Safety Council</td>
+<td>$49,150.00</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='Assurant'>
+<td>Assurant</td>
+<td>$47,451.25</td>
+<td>  
+5/17/2017 TL 
+
+Talked with Steven Lee, according to their corporate standard they are discussing whether or not DNN is an appropriate CMS for them. Steven is having a meeting Friday at 1 o'clock with company to discuss CMS options. Steven wants Assurant to stay with DNN as he likes it, so he will need to convince the board to stay. 
+
+Having a meeting with him and Tony S 5/24/2017 
+
+5/24/2017 TL 
+
+Per our meeting with Steven Lee, he stated that Assurant is planning to phase off DNN for business reasons. 
+
+The reasons discussed were: 
+
+80% of their sites are on SiteFinity, the company wanted to move to one CMS and have already signed a contract with SiteFinity. 
+They have 20+ certified SiteFinity developers while they had one person that helped managed DNN tasks. 
+The numbers that they’ve received from SiteFinity was significantly lower than what was given from DNN. 
+
+Even though Steven likes the product, the decision has been made by their new CIO. Per our understanding, they have 2 licenses, one coming up for renewal next month and another in 2018 ($100K) ... latter is up for churn risk.
+   
+</td>
+</tr>
+
+<tr class='trs' id='Sears-Holdings-Corporation'>
+<td>Sears Holdings Corporation</td>
+<td>$46,838.14</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='Valeant-Pharmaceuticals'>
+<td>Valeant Pharmaceuticals</td>
+<td>$46,515.83</td>
+<td>  
+June 1st 2017 TS 
+Per Will, Valeant have had a couple demos with him. He has even met with them at their office earlier this year. Import/Export, Page Templates, Site Templates are what they use the most. 
+
+Shivesh is actively speaking with Alex to come to our Ondemand with Evoq 9.1+.
+   
+</td>
+</tr>
+
+<tr class='trs' id='Buck-Consultants'>
+<td>Buck Consultants</td>
+<td>$46,045.80</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='Bridgewater'>
+<td>Bridgewater</td>
+<td>$45,321.50</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='FIS-Global'>
+<td>FIS Global</td>
+<td>$42,473.64</td>
+<td>  
+Sorry for not responding to you…..we have been busy with other projects. 
+
+We would like to chat with your Product Team and will let you know when we will be able to schedule this. 
+
+Thanks 
+Newroz 
+
+March 13-17 TS 
+Spoke with Melissa. Alex will send her a note for demo day/time in his License email, she welcomed the idea on AM call. 
+
+June 22nd 2017 TS 
+Agenda for John for demo on June 26th at 9.30 am --- 
+- Security vulnerability 
+o What is it? How sites are exploited? … Newroz noted, they have over 400 DNN sites, any information would be helpful. 
+o Can they receive more info from Telerik? If so, where? 
+- Evoq 9 new features 
+
+June 26th 2017 TS 
+- Discussed security exploit in-depth 
+- Per Newroz and Melissa, they'll be looking to upgrade their 7.3.4 and 5.x.x websites soon to Evoq 9. Discussed upgrade patch in-depth. 
+- Reviewed new features of Evoq 9
+   
+</td>
+</tr>
+
+<tr class='trs' id='Vision-Source'>
+<td>Vision Source</td>
+<td>$42,091.00</td>
+<td>  
+For reach out contact these people: 
+kortego@visionsource.com 
+cmassey@visionsource.com 
+bturney@visionsource.com 
+mbryant@visionsource.com 
+
+7/7/2017 TL: 
+Talked with Marcus, they're planning on upgrading their site in the upcoming quarter. Set up a Demo with them. 
+
+7/12/2017 TL: 
+Finished Demo With Chris and Marc, 
+- Has Engage internal site that utilizes Social modules, A lot of customizations on their current site. 
+- Last upgrade took a long time to upgrade as upgrade took about a month. 
+- Heavily uses analytics, uses link tracking
+   
+</td>
+</tr>
+
+<tr class='trs' id='ING-Direct'>
+<td>ING Direct</td>
+<td>$42,000.00</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='Boundless-Spatial'>
+<td>Boundless Spatial</td>
+<td>$40,950.00</td>
+<td>  
+Customer was worried about the Security issue (resolved) and is not ready to upgrade or demo -MF 
+
+April 24th 2017 TS 
+Per Elizabeth, they are already using Evoq 8, however would like to learn more about new features in 9.1, breaking changes and roadmap items. I’m also including Betsy and Tom in this invite as they are actively working on Support ticket (8596). 
+Meeting scheduled for Wednesday at 1pm with Chad with Elizabeth, Tom, Betsy and Jaime. 
+
+April 27th 2017 TS 
+Jaime wants to schedule a follow-up call to look closely at Evoq Engage, Liquid Content, other Evoq customers using Community (Engage) and Jaime will provide list of tools / recommendations of what’s missing in Evoq today that would help Boundless with engagement (their community users). Currently, they have 4,000 community Users and only "1 to 2" stick around. Some of it is they are still uploading resoureces, some is they are still learning to use Evoq. 
+
+Jaime will provide recommendations that can help them improve Evoq and increase engagement. Call setup for May 10th at 2pm. 
+
+Jaime also noted, they are willing to upgrade from 8.4.1 when Evoq 9.1 Cloud package is ready. 
+
+---------------------- 
+I wanted to send this list over to your team ahead of our call today. Currently, this is a high-level list of our pain points with our DNN implementation. I'm looking forward to reviewing them in more detail during our call. 
+
+1.  Marketo Integration is not working 
+o affecting our current version 
+2.  Password Reset Email is resulting in an Error 
+o `The redirect_uri parameter is not valid: "https://connect.boundlessgeo.com/UserLogin/ctl/Login/success/true?returnurl=/?email=bemmons@mapstory.org&message=You can now login to the application with the new password." If url looks fine, check that you are not including non printable chars` 
+o Users cannot change their password when manually sent a password reset email from Auth0 
+3.  User Roles aren’t Expiring 
+o If an expiration date is set for a role within DNN, the role is ported to Auth0, however the expiration date is not. Therefore, we need to manually remove user roles from Auth0. 
+o This is true for roles set by a community manager in DNN and for roles set via the subscription provider Chargify 
+4.  Zendesk Integration is Quirky 
+o When a ticket is submitted from Connect, it remains in the “pending” status rather than moving back to “open” when a customer responds 
+5.  Is there an automated way to bulk assign roles? 
+o Is writing a SQL statement the only way to bulk assign roles? 
+6.  Bugs with writing CSS into the WYSIWYG 
+o DNN will create extra spans and HTML out of nowhere 
+7.  Site is very slow when updating pages (designs, text, security changes) 
+8.  Padding errors throughout the site 
+o “Like” text overlaying buttons and question text 
+9.  HotJar Integration was a pain to install 
+o DNN broke three times trying to get the integration to work 
+o Stopped reading CSS during install (lost its template) 
+10. Switching between Community manager and Production host is excruciating 
+o changing the security roles for a page requires two logins 
+11. DNN cannot read SVG files 
+o workaround is to upload .png files 
+12. Wish layout was more flexible so we had more options to change the look of certain pages (Desktop Learning Center)* 
+13. Sandbox Configuration is Unknown 
+o How do we setup a sandbox environment so we can prep and test changes 
+
+May 10th 2017 TS 
+Some of these are bugs that are fixed in 9.1, they will upgrade and see whatever is outstanding. Others were addressed in the meeting with Chad and myself. For 5, they want to look at custom module and get number of hours it would take from Pro Services team.Undo
+   
+</td>
+</tr>
+
+<tr class='trs' id='Fidelis-Care'>
+<td>Fidelis Care</td>
+<td>$40,525.00</td>
+<td>  
+Spoke with John Wayda, he is checking with his manager for when they can do a meeting with the product team. - M.F 12/06/17
+   
+</td>
+</tr>
+
+<tr class='trs' id='Rust-Consulting,-Inc'>
+<td>Rust Consulting, Inc</td>
+<td>$38,958.67</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='Health-New-England'>
+<td>Health New England</td>
+<td>$38,250.00</td>
+<td>  
+Feb-10-17 TS 
+Client wants to upgrade to Evoq 9 in few months however, they would like to do the demo next week. 
+
+Feb-14-17 TS 
+Demo for Evoq 9 completed with Chris covering PersonaBar, Analytics, LC. 
+Demo was joined by Patrick McColley and Steven Webster. We recorded the demo and provided back to Patrick so he can forward it to his organization. 
+
+May 3rd 2017 TS 
+Did discovery call with Patrick for 9.1 He wants to schedule a demo for 9.1 and look at Asset Manager and Multi-Channel Publishing. Also, stated to Patrcik they are running out of complaince as their pageviews are well over 1 million. He wants to speak with AM to further discuss this finding. 
+
+June 26th 2017 TS 
+Spoke with Patrick and team. They're interested in completely new device for Staging - which will be cloned from their current Prod. Advised it will require new pricing, they're OK with that. Follow-up call on Thursday at 1.30 pm.
+   
+</td>
+</tr>
+
+<tr class='trs' id='Cleveland-Clinic'>
+<td>Cleveland Clinic</td>
+<td>$35,455.29</td>
+<td>  
+MG June 13, 2017 
+Talked to Troy Dotson, he declined the demo since they have already upgraded to 9.0.2 and are soon upgrading to 9.1. He also mentioned everything is fine on their end so they do not need to speak to the product team. 
+
+July 6th 2017 TS 
+Demo scheduled with Troy on July 12th at 8am. 
+
+July 12 2017 MG 
+Demo completed with Troy Dotson. Their current set up has over 50 public facing portals and over 150 portals on their intranet. 3 years ago they consolidated the portals with the assistance of a DNN Partner and have not made any big change after that. 
+Regarding 9.1, he liked Analytics and mentioned that was important for the company; nevertheless, he mentioned "cloud aversion" being present on their company which might stop them from moving to the use of MicroServices.
+   
+</td>
+</tr>
+
+<tr class='trs' id='INTO'>
+<td>INTO</td>
+<td>$33,836.86</td>
+<td>  
+June 14th 2017 TS .. notes from discovery call with Mike Atkins 
+- INTO Global (privately funded) has University partnerships, 10 year old company headquartered in UK. 
+- 1700 users .. 50 million in turnover 
+- With university partnerships, they go into ventures .. 21 diff joint ventures .. 1 in china .. rest are split across U.S. and U.K. 
+- They market universities as destinations for students to attend school 
+- Example, if you're born in China ..you want western degree.. they'll arrange that.. put student in touch with school 
+- They have physical buildings on campuses for registration .. students can spend anywhere from 3 months to 3 years and they split the cost (profits) with universities 
+
+- How they find students? Two ways 
+
+intostudy.com .. website .. search for course see your option and student goes from there.. university partner will make the offer 
+b2b site.. intoglobal.com .. 8% of revenue comes from agency... agents are all over, ex; in shopping mall 
+
+- Both sites powered by DNN. Built and maintained by Cantarus, Mike says they will very strongly be growing in Digital field. Mike is looking at growing his internal team and working with Cantarus. 
+- They have slightly outdated version (8) of DNN, wants to upgrade to 9. 
+- DNN doesn't have a good name with his organization .. as the website was been built by external suppliers, pre Cantarus. 
+- Mike's internal customer is marketing team.. their websites are available in four languages; English, Chinese, Russian, Arabic 
+- Content editing is frustrating for their DNN users. 
+- Site pages take long-time to load 
+- Most of their production inventory is in Salesforce .. they want to export this data .. much more live API read in DNN 
+- Looking for more improved search 
+- Between those two sites .. they want to share common assets .. in total they have 22 university sites around the world
+
+Goals: 
+Reduce friction of maintaining site 
+Better experience for staff who works with DNN .. also customers 
+
+- Looking for guidance on how DNN can help in the meeting and how DNN can help sell this internally 
+
+- Internally Mike's client is VP of Marketing .. she was pressuring Mike on a/b testing .. they're aiming to be very data-driven .. her example of a/b testing, add new features and 
+run old and new versions in parallel and get feedback 
+
+Audience for call .. product owners rather than website.. VP of Marketing .. CTO Andy 
+
+Mike is trying to present upgrade (path) .. let us not get distracted .. "we going to upgrade and these are the great feature." 
+- Mike is under pressure to deliver new sites and features. Mike needs our help to make this happen. 
+Check off hygiene issues.. A/B testing, share content across sites .. excite people with potential.. stuff they can do and they didn't even thought of doing 
+
+- Meeting will be scheduled on June 29th at 8.30 am. Mike will be back in office on 28th. 
+
+- Provided support email so they can log tickets if need being. 
+
+Aug 28 2017 TS 
+Haven't heard back from Mike on Evoq 9 demo after multiple attempts, info passed on to Alex ... for reachout.
+   
+</td>
+</tr>
+
+<tr class='trs' id='Solar-Turbines'>
+<td>Solar Turbines</td>
+<td>$33,150.00</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='WH-Smith-Ltd'>
+<td>WH Smith Ltd</td>
+<td>$31,998.80</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='Houston-Livestock-Show-and-Rodeo'>
+<td>Houston Livestock Show and Rodeo</td>
+<td>$31,181.13</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='Dart-Transit-Company'>
+<td>Dart Transit Company</td>
+<td>$30,746.50</td>
+<td>  
+MF - Customer is on 9, they have had an issue with the Form Builder however they cannot work on this issue as the technical contact is out of office. 22/02/2017
+   
+</td>
+</tr>
+
+<tr class='trs' id='USACRC-(Combat-Readiness-Center)'>
+<td>USACRC (Combat Readiness Center)</td>
+<td>$30,339.56</td>
+<td>  
+June 14th 2017 TS .. from Jason 
+Thanks Tony. We're about to re-up some licenses so this week is good if we can discuss. 
+
+I'd like to see how the tool has grown for the collaboration features (if any). We would not be able to upgrade until a certificate of networthiness was done anyway. 
+Jason 
+
+June 22nd 2017 TS 
+Per my discussion with Chris and Jason, Jason has already seen a demo and provided his feedback and concerns regarding Evoq 9 Engage. For last 2 months, he's been utilizing Evoq 9 trial. 
+
+NOTE: Jason is not interested in Engage unless it is updated to allow for people to comment or reply with a file attachment. This is a very big point.
+   
+</td>
+</tr>
+
+<tr class='trs' id='Public-Transport-Authority-of-WA'>
+<td>Public Transport Authority of WA</td>
+<td>$30,168.00</td>
+<td>  
+Feb 28-17 TS 
+Demo for Evoq 9 scheduled with Chris at 5pm on March 14th. 
+
+March 14-17 TS 
+Demo completed with Chris, Shawn executed it as I was in surgery on this day. 
+
+April 5th 2017 TS 
+After demo, per Justin's note, they're interested in updated pricing for Evoq cloud installations.
+   
+</td>
+</tr>
+
+<tr class='trs' id='State-of-Montana'>
+<td>State of Montana</td>
+<td>$29,796.60</td>
+<td>  
+2/27/2017 TL: 
+The company currently does not have a supervisor that is responsible for management and direct use for DNN. 
+Does not want to have a meeting until a supervisor is hired. 
+
+Following up in a couple of weeks. 
+
+3/21/2017 
+Scheduled Demo with Dustin 
+
+3/22/2017 
+Team was excited to start using DNN 
+
+Here are the follow ups for the meeting that we will be addressing: 
+
+- Ability to permission the persona bar (documentation) 
+
+- How is the URL served for a UNC folder 
+
+- Are we going to move to JQuery 3 
+
+- Accessibility checker 
+
+Dustin and his team is excited to use DNN moving forward and excited to see that we are planning to move to JQuery 3. 
+He will be utilizing Form Builder and Analytics
+   
+</td>
+</tr>
+
+<tr class='trs' id='F5-Networks'>
+<td>F5 Networks</td>
+<td>$28,809.00</td>
+<td>  
+March 28-17 TS 
+Demo completed with Chad. Items covered: 
+Asset manager and versioning. New featuers for Evoq 9. 
+
+Page Templates - how to manage them. How to add/create content using Pages and HTML. 
+
+They have financial releases .. would like to publish at certain times. 
+
+How to build on html modules and how they can extend their modules. 
+
+Documentation for Evoq. Answered questions on Localization - how to localize/translate content. 
+
+March 14-17 TS 
+Demo scheduled with Chad for March 28th at 3pm.
+   
+</td>
+</tr>
+
+<tr class='trs' id='American-Water-Works-Service-Company,-Inc.'>
+<td>American Water Works Service Company, Inc.</td>
+<td>$28,631.00</td>
+<td>  
+April 6, 2017 TL 
+They have a total of 38 Top-Level Domains on their device. They have a mix of TLDs that redirect to child domains and actual TLDs. They should only have 7 Top-Level Domains on their site which means they’ve gone over their limit of TLDs. 
+
+Let Alex know of the current situation and he will reach out to Bill 
+
+April 7, 2017 
+PS project nearly completed. Project consist of adding a SAML connector for their SSO using SecureAuth as their IdP. New sandbox to be created for client to test the SAML connector prior to launch. 
+
+May 8th 2017 TS 
+Demo scheduled with Bills team on May 29th at 11am to review new features in Evoq 9 with Chad. 
+Meeting rescheduled to June 6th, 11am. 
+
+June 6th 2017 TS 
+Demo completed with Bill, Dan and Ramesh by John. Reviewed new features in Evoq 9 and 9.1. They'll be upgrading soon to 9.1, will send note when they're ready to upgrade their Sandbox to 9.1.
+   
+</td>
+</tr>
+
+<tr class='trs' id='Sharp'>
+<td>Sharp</td>
+<td>$28,601.86</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='Mouser'>
+<td>Mouser</td>
+<td>$28,128.83</td>
+<td>  
+March 15-17 
+Called and left voicemail for Manuel Neri 
+
+April 10-17 
+Manuel opened ticket. 
+
+May 1-17 
+Completed Demo with Manuel (Chad was the presenter). We went over how Liquid Content can filter by tags to show certain content. This opens up possibilities such as filtering by language tags to handle translation. 
+
+Manuel also mentioned that he jas been using DNN for several years now and seems to be quite comfortable with it. It took a while to get used to the Persona Bar when moving away from the Control Bar, but other than that, it seems like Evoq has been getting more convenient/easy to use.
+   
+</td>
+</tr>
+
+<tr class='trs' id='City-of-Las-Vegas'>
+<td>City of Las Vegas</td>
+<td>$27,970.00</td>
+<td>  
+ 
+   
+</td>
+</tr>
+
+<tr class='trs' id='Aurora-Health-Care'>
+<td>Aurora Health Care</td>
+<td>$27,954.55</td>
+<td>  
+April 7th 2017 TS 
+Demo scheduled for Evoq 9 Engage on April 10th at 12pm PT through ticket 8890 with Erik and Justin to review new features of Evoq 9 and breaking changes in 9.1. They just upgraded from DNN 5, quite novice to Evoq 9. 
+
+April 10th 2017 TS 
+Demo completed by Chad with Erik and Justin. Demoed Evoq 9 - new features and discussed 9.1 breaking changes and new features.
+   
+</td>
+</tr>
+
+<tr class='trs' id='Protective-Life'>
+<td>Protective Life</td>
+<td>$27,820.33</td>
+<td>  
+August 4, 2017 - VM 
+Client project nearly completed. Client has signed off on the site and form styling. Pending last form to be uploaded - To be done by Chris Paterra. Client will be ready for launch prior to the end of August. 
+
+April 25, 2017 - VM 
+Timeline shared and appreciated by the client. Client would like to move forward with 1 of the 3 designs created by T-Worx with limited changes. Final design review meeting on May 4, 2017. 
+
+April 13, 2017 VM 
+Client has raised concerns about not receiving a timelines for the PS project. PS typically does not provide timelines as we were work off a first come first serve basis subject to payment. 
+We will have provided the client a timeline by April 18, 2017 that will highlight the milestones of the project. 
+Client does seem to be in a rush/urgent to get project off the ground and completed as soon as possible, although has not provided any internal hard dates/immediate need for the site. Client has also expressed concern that Design mistakenly reviewed the wrong site. Simple error, was fixed quickly, although client was unhappy. 
+
+April 7, 2017 VM 
+Design kick off for PS project set for April 12. 
+
+April 5, 2017 VM 
+Payment for PS project received. Emailed out to Travis and Charles regarding project design kick off to happen week of April 10. Vic to have a meeting with T-Worx prior to having a meeting with Protective Life. 
+High-level timeline: 
+Subject to the client’s reasonable cooperation, the design and build stage shall be completed within 60 days of the receipt of payment, provided the SOW is executed on or prior to the expiration date of February 23, 2017. The content import shall be completed within 45 days of the installation of the theme into the website. 
+
+Mar-2-2017 VM 
+Brand guideline received and shipped off to Tracy at T-Worx for review. Pending clients PS payment; will send deposit to T-Worx once PS is paid. Estimated high level plan is, deliver the theme within 60 days, and content migration 45 days after the theme is delivered. 
+
+Mar-13-2017 VM 
+Follow up made with Travis and Protective Life team. Mentioned we have reviewed brand guidelines and once payment is ready, we can kick off design meeting.
+   
+</td>
+</tr>
+
+<tr class='trs' id='Brightstar-Device-Protection,-LLC'>
+<td>Brightstar Device Protection, LLC</td>
+<td>$27,729.00</td>
+<td>  
+2/27/2017 TL: 
+Emailed Lena, Following up at the end of March. 
+
+Currently our company is going throw a lot of brand and technology changes. I would love to meet with you to discuss new opportunities, once I have more information on a directions we are going. Hope I will know more by the end of March. I’ll keep you posted. 
+
+4/13/2017 TL: 
+They have Content Licenses because of custom modules, they are concerned about security vulnerabilities. They are going through multiple technologies changes, she is interested in the new features that are coming out but she does not have enough information yet as they are still in process of these changes. Alex and I will re-coup with them in the beginning of June. 
+
+6/14/2017 TL: 
+
+Had a demo with Yelena. This is the summary: 
+Currently on Evoq Content 8.2 
+Very concerned about DNN's security (Regular security updates) 
+CMS is now only heavily on marketing purposes only 
+Two portals that existed one for marketing and one for customers to upload personal information (Moved away from CMS for the latter) 
+Website is now solely for marketing team (Post content update changes) 
+Custom modules that allowed customers to connect to the database and display information to user. Goes through two process security where they can input credit card information and personal information (Trying to move away from that) 
+Major module they use HTMLPro 
+Showed her Analytics, Liquid Content and Form Builder as she was mainly interested in those features. Interested in all of Evoq 9's new features. 
+I will be sending her how to upgrade from 8.2 to 9.1 as she will be looking to upgrade to utilize the new features. 
+
+They have a lot of different CMS', we want them to sole use Evoq. Possible upsell
+   
+</td>
+</tr>
+
+<tr class='trs' id='Destiny-Solutions'>
+<td>Destiny Solutions</td>
+<td>$27,638.00</td>
+<td>  
+Demo Scheduled for June 13th at 7:30 AM 
+
+Demo was conducted by Chad we covered all microservices (Form Builder, Analytics, and Liquid Content). Sonia was interested in mainly the Form builder as their marketing department creates and uses forms heavily. Sonia was also interested in the possibility of easily tracking file access through Google Analytics as they do this through a different service than GA currently. - MF 14/06/2017
+   
+</td>
+</tr>
+
+<tr class='trs' id='The-Carlstar-Group'>
+<td>The Carlstar Group</td>
+<td>$27,000.00</td>
+<td>  
+April 25th 2017 TS 
+Demo scheduled with Chris from Carlstar with Chad on May 1st at 9am. 
+
+May 1st 2017 TS 
+Demo completed with Chris by Chad. Covered new features in 9 and 9.1 + breaking changes. Chris has a spreadsheet on his Smithcart module(which he doesn't want to use) which he'll like to import in LC. We're setting another call with Chris P. to discuss this through Engage API and/or alternative solution ... multi-channel / portal publishing. He would also like to know numbers for Engage, how much more would it be. They're paying about $300 year for EasyDNN News and 10k/year for SmithCart. 
+They'll be upgrading to 9.1 soon, next week. 
+
+May 10th 2017 TS 
+Since API will be included in Content beginning 9.1.1, Chris B wants to work with Pro Services to import data in to Liquid Content and build Visualizers. 
+
+May 30th TS 
+Chris B sent sample csv file from their PIM System to see what loaded data would look like. Having Chris P review and provide feedback to Chris B.
+   
+</td>
+</tr>
+
+<tr class='trs' id='Fidelity-Financial-Title-Group'>
+<td>Fidelity Financial Title Group</td>
+<td>$26,500.00</td>
+<td>  
+05/15/2017 TL 
+Had a conversation with Shaun Enriquez, solved his issue, will follow up with him on Demo, said he was interested and will talk with his boss. 
+
+May 19th 2017 TS 
+Spoke with Shawn, he's setting up a new webfarm env, after that's completed, he'll be looking to upgrade and doing a demo.
+   
+</td>
+</tr>
+
+<tr class='trs' id='Calpine'>
+<td>Calpine</td>
+<td>$26,492.20</td>
+<td>  
+Spoke with Aneesha earlier on this she is not ready for a demo yet, will contact her during phase 2. -MF 
+
+June 5th 2017 TS 
+Aneesha agreed to demo, sending time slots. 
+
+June 16th 2017 
+Demo scheduled for today at 1 pm with Chris. Rescheduled to same time on Tuesday. 
+
+June 20th 2017 
+Demo coordinated by Chris for Aneesha, Sherri and Srini. Went over FB, GA, LC and Import/Export functionality. They'll discuss internally how they want to proceed with custom modules and look forward to upgrading soon to 9.
+   
+</td>
+</tr>
+
+<tr class='trs' id='Independent-Health'>
+<td>Independent Health</td>
+<td>$26,275.17</td>
+<td>  
+6/21/2017 TL: 
+Talked with Artel Devries, wanted to know more about the Security Vulnerability, setting up a meeting to discuss more.
+   
+</td>
+</tr>
+
+
+</table>
+
+<script src="https://kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+<script type="text/javascript">
+var searchValue = document.getElementById('searchAccount').value;
+  function searchAccounts()
+  {
+    searchValue = document.getElementById('searchAccount').value.replace(/ /g,"-");
+    var trs = document.getElementsByClassName("trs"); //divsToHide is an array
+    for(var i = 0; i < trs.length; i++)
+    {
+
+        trs[i].style.display = "none"; // depending on what you're doing
+    }
+
+    var toShow = document.getElementById(searchValue.toLowerCase());
+    toShow.style.display = "table-row";
+
+  }
+
+  function showAll()
+  {
+    var trs = document.getElementsByClassName("trs"); //divsToHide is an array
+    for(var i = 0; i < trs.length; i++)
+    {
+
+        trs[i].style.display = "table-row"; // depending on what you're doing
+    }
+  }
+</script>
+

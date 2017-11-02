@@ -81,7 +81,7 @@ public class MainBot implements Runnable
 						perform.clickAccount();
 						check.accountIsLoaded();
 						perform.copyText();
-						perform.changeTabs();
+						perform.clickTextEditor();
 						perform.typeCSInfo();
 						perform.backToHome();
 						check.isBackHome();
