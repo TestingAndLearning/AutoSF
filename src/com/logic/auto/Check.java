@@ -185,7 +185,7 @@ public class Check
 	        
 	        //Increments currentPin to skip this one and appends it to the no-read text box. 
 	        bot.appendAccount();
-	        bot.currentPin++;
+	        bot.currentAccountIndex++;
 	        bot.updatePin();
 	        bot.sleep(delay+100);
 		}

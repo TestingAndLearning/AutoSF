@@ -24,8 +24,8 @@ public class MainBot implements Runnable
 	//TODO Should turn public variables into getters. Temporarily using public to test out new functions. 	
 	private Frames frames;	
 	public boolean release = false;
-	public String pinArea[];
-	public int currentPin = 0;
+	public String accountArea[];
+	public int currentAccountIndex = 0;
 	public boolean skipNext = false;
 	public String choice = "";
 	public Robot robot;
@@ -42,7 +42,7 @@ public class MainBot implements Runnable
 			this.choice = choice;
 			this.release = release;
 			typeString = new Type();
-			this.pinArea = accountArea.split("\n");
+			this.accountArea = accountArea.split("\n");
 		} 
 		catch (Exception e)
 		{
@@ -66,12 +66,13 @@ public class MainBot implements Runnable
 			Toolkit toolkit = Toolkit.getDefaultToolkit();
 			Clipboard clipboard = toolkit.getSystemClipboard();
 			String clipboardResult = (String) clipboard.getData(DataFlavor.stringFlavor);
-			String csSection = clipboardResult.split("CS Notes")[1].split("CS Demo Date")[0];
+			//String csSection = clipboardResult.split("CS Notes")[1].split("CS Demo Date")[0];
+			String csSection = "hello";
 			
 
 			//Sets out the order of steps to take from the beginning
-				//for (;currentPin < pinArea.length; currentPin++)
-				for(int i = 0; i < 1; i++)
+				for (;currentAccountIndex < accountArea.length; currentAccountIndex++)
+				//for(int i = 0; i < 1; i++)
 				{		
 						/*
 						String testString = Arrays.toString(pinArea).replace(",", "\n").replace("[", "").replace("]", "").replace(" ", "");
@@ -79,7 +80,7 @@ public class MainBot implements Runnable
 						
 						*/
 						System.out.println(csSection);
-
+						perform.searchAccount();
 						
 						
 						/* 
@@ -162,13 +163,13 @@ public class MainBot implements Runnable
 	/** Appends the current pin number to the no-read text box. **/
 	public void appendAccount()
 	{
-		frames.pinArea2.append(pinArea[currentPin]+ "\n");
+		frames.pinArea2.append(accountArea[currentAccountIndex]+ "\n");
 	}
 	
 	/** Updates that pins to be released text box by removing pins already released. **/
 	public void updatePin()
 	{
-		String[] updatedPin = Arrays.copyOfRange(pinArea, currentPin + 1, pinArea.length); //+1 for current pins to clear whole box after everything is done. 
+		String[] updatedPin = Arrays.copyOfRange(accountArea, currentAccountIndex + 1, accountArea.length); //+1 for current pins to clear whole box after everything is done. 
 		frames.accountArea.setText(Arrays.toString(updatedPin).replace(",", "\n").replace("[", "").replace("]", "").replace(" ", "")); //Default display of toString from array shows square brackets with commas separating each value. This replaces it. 
 	}	
 	
@@ -179,19 +180,31 @@ public class MainBot implements Runnable
 		//TODO Change path to same as .jar path. 
 		try (PrintWriter out = new PrintWriter("h:\\p\\log.txt"))
 		{
-			String[] rawPinText = Arrays.copyOfRange(pinArea, currentPin + 1, pinArea.length); 
-			String currentPinText = Arrays.toString(rawPinText).replace(",", "\r\n").replace("[", "").replace("]", "").replace(" ", "");
+			String[] rawPinText = Arrays.copyOfRange(accountArea, currentAccountIndex + 1, accountArea.length); 
+			String currentAccountText = Arrays.toString(rawPinText).replace(",", "\r\n").replace("[", "").replace("]", "").replace(" ", "");
 			
 			//TODO check if noread pin is writing correctly onto file. 
 			String[] rawNoreadText = Arrays.copyOfRange(frames.pinArea2.getText().split("\n"), 0, frames.pinArea2.getText().split("\n").length); 
 			String currentNoreadText = Arrays.toString(rawNoreadText).replace(",", "\r\n").replace("[", "").replace("]", "").replace(" ", "");
 			
-			out.print("@@@@@ to be @@@@@. " + "\r\n" + "===================" + "\r\n" + currentPinText
+			out.print("@@@@@ to be @@@@@. " + "\r\n" + "===================" + "\r\n" + currentAccountText
 					+ "\r\n\r\n" + "@@@@@" + "\r\n" + "===================" + "\r\n" + currentNoreadText);
 		} catch (IOException e)
 		{
 			e.printStackTrace();
 		}
+	}
+	
+	/** Remember to clean up code above since it was from different project. **/
+	//Checks for folder and id card icon to see if there is only 1 result for account. 
+	public String getCurrentAccount()
+	{
+		return accountArea[currentAccountIndex].split("\\$")[0].trim();
+	}
+	
+	public String getCurrentValue()
+	{
+		return "$" + accountArea[currentAccountIndex].split("\\$")[1].trim();
 	}
 	
 }

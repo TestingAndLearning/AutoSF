@@ -11,7 +11,7 @@ import com.commands.auto.MainBot;
 public class Perform
 {
 	private MainBot bot;
-	private int delay = 200;
+	private int delayTime = 200;
 	public boolean noread = false;
 	
 	public Perform(MainBot bot)
@@ -58,13 +58,13 @@ public class Perform
 				color2.getBlue() != 255)
 		{
 			bot.robot.mouseMove(1767, 84);
-			bot.sleep(delay);
+			bot.sleep(delayTime);
 			bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 			bot.robot.mouseMove(1657, 84);
 			bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-			bot.sleep(delay);
-			bot.type(bot.pinArea[bot.currentPin]);
-			bot.sleep(delay);
+			bot.sleep(delayTime);
+			bot.type(bot.accountArea[bot.currentAccountIndex]);
+			bot.sleep(delayTime);
 		}
 		
 		color = bot.robot.getPixelColor(614, 393);
@@ -110,45 +110,45 @@ public class Perform
 			if (choice == "Opened")
 			{
 				bot.robot.mouseMove(494, 361);
-				bot.sleep(delay);
+				bot.sleep(delayTime);
 				bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 				bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-				bot.sleep(delay);
+				bot.sleep(delayTime);
 			}
 			
 			//Clicks @@@@@
 			if (choice == "Triaged")
 			{
 				bot.robot.mouseMove(553, 361);
-				bot.sleep(delay);
+				bot.sleep(delayTime);
 				bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 				bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-				bot.sleep(delay);
+				bot.sleep(delayTime);
 			}
 			
 			//Clicks @@@@@
 			bot.robot.mouseMove(553, 422);
-			bot.sleep(delay);
+			bot.sleep(delayTime);
 			bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 			bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-			bot.sleep(delay);
+			bot.sleep(delayTime);
 			
 			//Clicks @@@@@
 			if (choice == "Triaged")
 			{
 				bot.robot.mouseMove(689, 510);
-				bot.sleep(delay);
+				bot.sleep(delayTime);
 				bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 				bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-				bot.sleep(delay);
+				bot.sleep(delayTime);
 			}
 			
 			//Clicks @@@@@
 			bot.robot.mouseMove(472, 586);
-			bot.sleep(delay);
+			bot.sleep(delayTime);
 			bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 			bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-			bot.sleep(delay);
+			bot.sleep(delayTime);
 			
 			//Highlights @@@@@
 			bot.robot.mouseMove(863, 806);
@@ -157,7 +157,7 @@ public class Perform
 			bot.sleep(200);
 			bot.robot.mouseMove(455, 756);
 			bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-			bot.sleep(delay);
+			bot.sleep(delayTime);
 			
 			
 			//Types text into @@@@@
@@ -173,7 +173,7 @@ public class Perform
 				bot.robot.keyRelease(KeyEvent.VK_R);
 				bot.robot.keyRelease(KeyEvent.VK_SHIFT);
 				bot.type("@@@@@ @@@@@ @@@@@. ");
-				bot.sleep(delay);
+				bot.sleep(delayTime);
 				
 			}
 			
@@ -190,13 +190,13 @@ public class Perform
 				bot.robot.keyRelease(KeyEvent.VK_R);
 				bot.robot.keyRelease(KeyEvent.VK_SHIFT);
 				bot.type("@@@@@ @@@@@ @@@@@");
-				bot.sleep(delay);
+				bot.sleep(delayTime);
 			}
 			
 			//Moves to save. Sleep time at end can be reduced, but this part is also slow/unpredictable
 			//in the system so it was best to give it a bit more time before it moves on, just to be safe. 
 			bot.robot.mouseMove(1820, 898);
-			bot.sleep(delay);
+			bot.sleep(delayTime);
 			bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 			bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
 			System.out.println("@@@@@ completed.");
@@ -229,7 +229,7 @@ public class Perform
 		//Moves mouse to @@@@@
 		System.out.println("Going back");
 		bot.robot.mouseMove(854, 550);
-		bot.sleep(delay);
+		bot.sleep(delayTime);
 		bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 		bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
 		bot.sleep(500);
@@ -247,15 +247,15 @@ public class Perform
 		
         //Pastes PIN
         bot.robot.mouseMove(3360, 233);
-        bot.sleep(delay+100);
+        bot.sleep(delayTime+100);
         bot.robot.mousePress(InputEvent.BUTTON1_MASK);
-        bot.sleep(delay+100);
+        bot.sleep(delayTime+100);
         bot.robot.mouseMove(3200, 233);
         bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-        bot.sleep(delay+100);
-        bot.type(bot.pinArea[bot.currentPin]);
+        bot.sleep(delayTime+100);
+        bot.type(bot.accountArea[bot.currentAccountIndex]);
         
-        bot.sleep(delay+100);
+        bot.sleep(delayTime+100);
 
         //Presses enter to search pin. 
         bot.robot.keyPress(KeyEvent.VK_ENTER);
@@ -270,10 +270,10 @@ public class Perform
         {
     		System.out.println("@@@@@ detected. Refreshing and appending pin. ");
     		bot.robot.mouseMove(3140, 187);
-    		bot.sleep(delay+200);
+    		bot.sleep(delayTime+200);
     		bot.robot.mousePress(InputEvent.BUTTON1_MASK);
     		bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-    		bot.sleep(delay);
+    		bot.sleep(delayTime);
     		
 	        noread = true;
         }
@@ -287,10 +287,10 @@ public class Perform
 			//@@@@@close. 
 			System.out.println("@@@@@ detected. @@@@@. ");
 			bot.robot.mouseMove(3549, 623);
-			bot.sleep(delay+200);
+			bot.sleep(delayTime+200);
 	        bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 	        bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-	        bot.sleep(delay+200);
+	        bot.sleep(delayTime+200);
 	        
 	        noread = true;
 		}
@@ -299,12 +299,12 @@ public class Perform
 		{
 			//Clicks @@@@@ then @@@@@ to @@@@@
 			bot.robot.mouseMove(3012, 539);
-			bot.sleep(delay+300);
+			bot.sleep(delayTime+300);
 			bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 			bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-			bot.sleep(delay+300);
+			bot.sleep(delayTime+300);
 			bot.robot.mouseMove(3012, 560);
-			bot.sleep(delay+300);
+			bot.sleep(delayTime+300);
 			bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 			bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
 			bot.sleep(2000);
@@ -314,18 +314,18 @@ public class Perform
 			
 			//Clicks @@@@@ for @@@@@ then @@@@@. 
 			bot.robot.mouseMove(3368, 545);
-			bot.sleep(delay+100);
+			bot.sleep(delayTime+100);
 			bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 			bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-			bot.sleep(delay+100);
+			bot.sleep(delayTime+100);
 			bot.robot.mouseMove(3368, 709);
-			bot.sleep(delay+100);
+			bot.sleep(delayTime+100);
 			bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 			bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-			bot.sleep(delay+100);
+			bot.sleep(delayTime+100);
 			//Clicks refer
 			bot.robot.mouseMove(3722, 530);
-			bot.sleep(delay+100);
+			bot.sleep(delayTime+100);
 			bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 			bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
 			bot.sleep(3000);
@@ -334,10 +334,10 @@ public class Perform
 			
 			//Clicks @@@@@
 			bot.robot.mouseMove(2947, 229);
-			bot.sleep(delay+100);
+			bot.sleep(delayTime+100);
 			bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 			bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-			bot.sleep(delay+100);
+			bot.sleep(delayTime+100);
 		}
 		
 		//Moved down to bottom so the method finishes all blocks first before moving on. This way it does not 
@@ -347,9 +347,9 @@ public class Perform
 			System.out.println("Incrementing PIN to skip no-read. ");
 	        //Increments currentPin to skip this one and appends it to the no-read text box. 
 	        bot.appendAccount();
-	        if (bot.currentPin < bot.pinArea.length) //This avoids error when incrementing pin above the limit. 
+	        if (bot.currentAccountIndex < bot.accountArea.length) //This avoids error when incrementing pin above the limit. 
 	        {
-	        	bot.currentPin++;
+	        	bot.currentAccountIndex++;
 	        }
 	        bot.updatePin();
 	        bot.sleep(2000);  
@@ -363,17 +363,46 @@ public class Perform
 	{
 		System.out.println("@@@@@ @@@@@");
 		bot.robot.mouseMove(3140, 187);
-		bot.sleep(delay+200);
+		bot.sleep(delayTime+200);
 		bot.robot.mousePress(InputEvent.BUTTON1_MASK);
 		bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
-		bot.sleep(delay);
+		bot.sleep(delayTime);
 	}
 	
 	
 	/** Remember to clean up code above since it was from different project. **/
+	public void wait(int time)
+	{
+		bot.sleep(time);
+	}
+	
+	//Combines move and click.
+	public void moveAndClick(int x,int y)
+	{
+		bot.sleep(delayTime);
+		bot.robot.mouseMove(x, y);
+		bot.sleep(400);
+		bot.robot.mousePress(InputEvent.BUTTON1_MASK);
+		bot.robot.mouseRelease(InputEvent.BUTTON1_MASK);
+		bot.sleep(delayTime);
+	}
+	
 	//Moves mouse to search bar on left, pastes the first account from list and presses enter to search. 
 	public void searchAccount()
 	{
-		
+		bot.type(bot.getCurrentAccount());
+		/*
+		moveAndClick(50,300);
+		wait(delayTime);
+		bot.robot.keyPress(KeyEvent.VK_CONTROL);
+		bot.robot.keyPress(KeyEvent.VK_A);
+		bot.robot.keyRelease(KeyEvent.VK_A);
+		bot.robot.keyRelease(KeyEvent.VK_CONTROL);
+		bot.type(bot.getCurrentAccount());
+		wait(delayTime);
+		bot.robot.keyPress(KeyEvent.VK_ENTER);
+		bot.robot.keyRelease(KeyEvent.VK_ENTER);
+		wait(delayTime);
+		*/
 	}
 }
