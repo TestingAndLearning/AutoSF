@@ -63,11 +63,7 @@ public class MainBot implements Runnable
 			Scan scan = new Scan(MainBot.this, perform);
 			Check check = new Check(MainBot.this, perform, scan);
 			
-			Toolkit toolkit = Toolkit.getDefaultToolkit();
-			Clipboard clipboard = toolkit.getSystemClipboard();
-			String clipboardResult = (String) clipboard.getData(DataFlavor.stringFlavor);
-			//String csSection = clipboardResult.split("CS Notes")[1].split("CS Demo Date")[0];
-			String csSection = "hello";
+
 			
 
 			//Sets out the order of steps to take from the beginning
@@ -81,25 +77,15 @@ public class MainBot implements Runnable
 						*/
 						//System.out.println(csSection);
 						perform.searchAccount();
-						//check.searchResultsAreLoaded();
-						
-						
-						//perform.backToHome();
-						
-						/* 
-						perform.searchPin();
-						check.searchResults();
-						check.noRead();
-						perform.exam(choice);
-						check.goBack();
-						perform.fixError();
-						scan.fixedError();
-						perform.goBack();
-						check.home();
-						perform.refreshCDS();
-						updatePin();
-						toLog();
-						*/
+						check.searchResultsAreLoaded();
+						perform.clickAccount();
+						check.accountIsLoaded();
+						perform.copyText();
+						perform.changeTabs();
+						perform.typeCSInfo();
+						perform.backToHome();
+						check.isBackHome();
+
 						
 						synchronized(this)
 						{
