@@ -34,20 +34,23 @@ public class Check
 	public void searchResultsAreLoaded()
 	{
 		System.out.println("Checking if search results are loaded. ");
-		int folderX = 255;
+		int folderX = 305;
 		int folderY = 420;
 		int blankspaceX = 245;
-		int blankspaceY = 479;
+		int blankspaceY = 497;
 		Color color = bot.robot.getPixelColor(folderX,  folderY);
 		Color color2 = bot.robot.getPixelColor(blankspaceX,  blankspaceY);
 		System.out.println("Checking searchResultsAreLoaded(). ");
 		bot.sleep(1000);
-		while (!(color.getRed() < 200 && color2.getGreen() == 255))	//Checks if folder part is orange and there is a blank space between the two sections to prove that there is only one result. 
+		while (!(color.getRed() > 200 && color2.getGreen() == 255))	//Checks if folder part is orange and there is a blank space between the two sections to prove that there is only one result. 
 		{
 			System.out.println("searchResultsAreLoaded() not passed yet. ");
 			bot.sleep(2000);
 			color = bot.robot.getPixelColor(folderX,  folderY);
 			color2 = bot.robot.getPixelColor(blankspaceX,  blankspaceY);
+			
+			System.out.println("R: "+ color.getRed() +" G: " + color2.getGreen());
+			
 		}
 		bot.sleep(1000);
 		System.out.println("Checking if search results are loaded. ");
@@ -65,7 +68,7 @@ public class Check
 		Color color2 = bot.robot.getPixelColor(blankspaceX,  blankspaceY);
 		System.out.println("Checking accountIsLoaded(). ");
 		bot.sleep(1000);
-		while (!(color.getRed() < 200 && color2.getGreen() == 255))	//Checks if folder part is orange and there is a blank space between the two sections to prove that there is only one result. 
+		while (!(color.getRed() > 200 && color2.getGreen() == 255))	//Checks if folder part is orange and there is a blank space between the two sections to prove that there is only one result. 
 		{
 			System.out.println("accountIsLoaded() not passed yet. ");
 			bot.sleep(2000);
@@ -88,7 +91,7 @@ public class Check
 		Color color2 = bot.robot.getPixelColor(blankspaceX,  blankspaceY);
 		System.out.println("Checking accountIsLoaded(). ");
 		bot.sleep(1000);
-		while ((color.getRed() < 200 && color2.getGreen() == 255))	//Checks if folder part is orange and there is a blank space between the two sections to prove that there is only one result. 
+		while ((color.getRed() > 200 && color2.getGreen() == 255))	//Checks if folder part is orange and there is a blank space between the two sections to prove that there is only one result. 
 		{
 			System.out.println("accountIsLoaded() not passed yet. ");
 			bot.sleep(2000);
