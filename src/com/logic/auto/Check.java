@@ -14,6 +14,8 @@ public class Check
 	private Perform perform;
 	private Scan scan;
 	private boolean redone = false;
+	//Color color = bot.robot.getPixelColor(0,  0);
+	//Color color2 = bot.robot.getPixelColor(0,  0);
 
 	
 	public Check(MainBot bot, Perform perform, Scan scan)
@@ -366,12 +368,44 @@ public class Check
 	}
 	
 	/** Remember to clean up code above since it was from different project. **/
+	public void searchResultsAreLoaded()
+	{
+		int folderX = 255;
+		int folderY = 420;
+		int blankspaceX = 245;
+		int blankspaceY = 479;
+		//color = bot.robot.getPixelColor(folderX,  folderY);
+		//color2 = bot.robot.getPixelColor(blankspaceX,  blankspaceY);
+		System.out.println("Checking searchResultsAreLoaded(). ");
+		bot.sleep(1000);
+		//while (!(color.getRed() < 200 && color2.getGreen() == 255))	//Checks if folder part is orange and there is a blank space between the two sections to prove that there is only one result. 
+		//{
+		//	System.out.println("searchResultsAreLoaded() not passed yet. ");
+		//	bot.sleep(2000);
+		//}
+	}
+	
+	/** Remember to clean up code above since it was from different project. **/
+	public void accountIsLoaded()
+	{
+		int folderX = 258;
+		int folderY = 262;
+		int blankspaceX = 247;
+		int blankspaceY = 357;
+		//color = bot.robot.getPixelColor(folderX,  folderY);
+		//color2 = bot.robot.getPixelColor(blankspaceX,  blankspaceY);
+		//System.out.println("Checking accountIsLoaded(). ");
+		//bot.sleep(1000);
+		//while (!(color.getRed() < 200 && color2.getGreen() == 255))	//Checks if folder part is orange and there is a blank space between the two sections to prove that there is only one result. 
+		//{
+			System.out.println("accountIsLoaded() not passed yet. ");
+			bot.sleep(2000);
+		//}
+	}
+	
 	//Checks for folder and id card icon to see if there is only 1 result for account. 
-	public void ifOnlyOneResult()
+	public void onlyHasOneResult()
 	{
 		
 	}
-	
-	
-	
 }

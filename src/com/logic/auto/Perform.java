@@ -376,6 +376,23 @@ public class Perform
 		bot.sleep(time);
 	}
 	
+	public void backToHome()
+	{
+		moveAndClick(50,300);
+		wait(delayTime);
+		bot.robot.keyPress(KeyEvent.VK_CONTROL);
+		bot.robot.keyPress(KeyEvent.VK_A);
+		bot.robot.keyRelease(KeyEvent.VK_A);
+		bot.robot.keyRelease(KeyEvent.VK_CONTROL);
+		wait(delayTime);
+		bot.robot.keyPress(KeyEvent.VK_DELETE);
+		bot.robot.keyRelease(KeyEvent.VK_DELETE);
+		wait(delayTime);
+		bot.robot.keyPress(KeyEvent.VK_ENTER);
+		bot.robot.keyRelease(KeyEvent.VK_ENTER);
+		wait(delayTime);
+	}
+	
 	//Combines move and click.
 	public void moveAndClick(int x,int y)
 	{
@@ -390,7 +407,13 @@ public class Perform
 	//Moves mouse to search bar on left, pastes the first account from list and presses enter to search. 
 	public void searchAccount()
 	{
-		bot.type(bot.getCurrentAccount());
+		bot.type("<tr class + 'trs' id='" + bot.getCurrentAccount().replaceAll("\\s+","-") + "'>" + "\n" +
+				"<td>"+bot.getCurrentAccount()+"</td>"+"\n" + 
+				"<td>"+"$"+bot.getCurrentValue()+"</td>"+"\n" +
+				"<td>"+"23" + 
+
+				"</td>" + "\n" +
+				"</tr>" + "\n");
 		/*
 		moveAndClick(50,300);
 		wait(delayTime);
@@ -404,5 +427,16 @@ public class Perform
 		bot.robot.keyRelease(KeyEvent.VK_ENTER);
 		wait(delayTime);
 		*/
+		
+		/*
+"<tr class='trs' id='" + bot.getCurrentAccount.replaceAll("\\s+","-") + "'>" + "\n" +
+"<td>"+bot.getCurrentAccount()+"</td>"+"\n" + 
+"<td>"+"$"+bot.getCurrentValue()+"</td>"+"\n" +
+"<td>"+"23" + 
+
+"</td>" + "\n" +
+"</tr>" + "\n"
+		 */
+		 */
 	}
 }

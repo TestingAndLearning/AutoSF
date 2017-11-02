@@ -79,9 +79,12 @@ public class MainBot implements Runnable
 						System.out.println(testString);
 						
 						*/
-						System.out.println(csSection);
+						//System.out.println(csSection);
 						perform.searchAccount();
+						//check.searchResultsAreLoaded();
 						
+						
+						//perform.backToHome();
 						
 						/* 
 						perform.searchPin();
